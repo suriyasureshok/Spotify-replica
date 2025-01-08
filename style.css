@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to right, #6a0572, #a4508b);
+    color: #fff;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Search Section */
+.search-section {
+    padding: 2rem;
+}
+.search-section input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Library Section */
+.library-section {
+    padding: 2rem;
+}
+.library-section ul {
+    list-style: none;
+    padding: 0;
+}
+.library-section li {
+    background-color: #eee;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Albums Section */
+.albums-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+.albums-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    perspective: 1000px;
+}
+.album {
+    width: 150px;
+    height: 150px;
+    background-color: #6a0572;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+/* Music Player */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.music-player .controls {
+    display: flex;
+    gap: 1rem;
+}
+.music-player button {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.music-player button:hover {
+    background-color: #f4a261;
+}
+.music-player input[type="range"] {
+    margin: 0 1rem;
+}
