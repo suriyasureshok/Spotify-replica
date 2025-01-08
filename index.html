@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/spotify-logo.png" alt="Spotify Logo">
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="What do you want to listen to?">
+                    </div>
+                    <div class="search-divider"></div>
+                    <button class="browse-btn">
+                        <i class="fas fa-compass"></i>
+                        <span>Browse</span>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-buttons">
+                <a href="#" class="nav-link">Sign Up</a>
+                <button class="login-btn">Log in</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="genres-container" id="genresSection" style="display: none;">
+        <h2>Browse All Genres</h2>
+        <div class="genres-grid">
+            <!-- Popular Global Genres -->
+            <div class="genre-card" style="background-color: #E13300">
+                <h3>Pop</h3>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="genre-card" style="background-color: #1E3264">
+                <h3>Hip-Hop</h3>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="genre-card" style="background-color: #E8115B">
+                <h3>Rock</h3>
+                <i class="fas fa-guitar"></i>
+            </div>
+            <div class="genre-card" style="background-color: #148A08">
+                <h3>R&B</h3>
+                <i class="fas fa-record-vinyl"></i>
+            </div>
+            <div class="genre-card" style="background-color: #BC5900">
+                <h3>Jazz</h3>
+                <i class="fas fa-saxophone"></i>
+            </div>
+            <div class="genre-card" style="background-color: #537AA1">
+                <h3>Classical</h3>
+                <i class="fas fa-violin"></i>
+            </div>
+            <div class="genre-card" style="background-color: #8400E7">
+                <h3>Electronic</h3>
+                <i class="fas fa-wave-square"></i>
+            </div>
+            <div class="genre-card" style="background-color: #1DB954">
+                <h3>Reggae</h3>
+                <i class="fas fa-drum"></i>
+            </div>
+            
+            <!-- Regional Genres -->
+            <div class="genre-card" style="background-color: #FF6B6B">
+                <h3>K-Pop</h3>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="genre-card" style="background-color: #4B917D">
+                <h3>Bollywood</h3>
+                <i class="fas fa-film"></i>
+            </div>
+            <div class="genre-card" style="background-color: #777777">
+                <h3>Latin</h3>
+                <i class="fas fa-guitar"></i>
+            </div>
+            <div class="genre-card" style="background-color: #D4AC0D">
+                <h3>Afrobeats</h3>
+                <i class="fas fa-drum"></i>
+            </div>
+            
+            <!-- Specific Genres -->
+            <div class="genre-card" style="background-color: #7D3C98">
+                <h3>Metal</h3>
+                <i class="fas fa-bolt"></i>
+            </div>
+            <div class="genre-card" style="background-color: #2E86C1">
+                <h3>Blues</h3>
+                <i class="fas fa-guitar"></i>
+            </div>
+            <div class="genre-card" style="background-color: #138D75">
+                <h3>Country</h3>
+                <i class="fas fa-hat-cowboy"></i>
+            </div>
+            <div class="genre-card" style="background-color: #D35400">
+                <h3>Folk</h3>
+                <i class="fas fa-acoustic-guitar"></i>
+            </div>
+            
+            <!-- World Music -->
+            <div class="genre-card" style="background-color: #8E44AD">
+                <h3>Samba</h3>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="genre-card" style="background-color: #2C3E50">
+                <h3>Flamenco</h3>
+                <i class="fas fa-guitar"></i>
+            </div>
+            <div class="genre-card" style="background-color: #C0392B">
+                <h3>Celtic</h3>
+                <i class="fas fa-clover"></i>
+            </div>
+            <div class="genre-card" style="background-color: #16A085">
+                <h3>Arabic</h3>
+                <i class="fas fa-moon"></i>
+            </div>
+            
+            <!-- Contemporary Genres -->
+            <div class="genre-card" style="background-color: #27AE60">
+                <h3>Indie</h3>
+                <i class="fas fa-headphones"></i>
+            </div>
+            <div class="genre-card" style="background-color: #8B4513">
+                <h3>Soul</h3>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="genre-card" style="background-color: #4A235A">
+                <h3>Punk</h3>
+                <i class="fas fa-bolt"></i>
+            </div>
+            <div class="genre-card" style="background-color: #935116">
+                <h3>Gospel</h3>
+                <i class="fas fa-church"></i>
+            </div>
+            
+            <!-- Electronic Sub-genres -->
+            <div class="genre-card" style="background-color: #2980B9">
+                <h3>House</h3>
+                <i class="fas fa-wave-square"></i>
+            </div>
+            <div class="genre-card" style="background-color: #8E44AD">
+                <h3>Techno</h3>
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="genre-card" style="background-color: #C0392B">
+                <h3>Dubstep</h3>
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="genre-card" style="background-color: #D35400">
+                <h3>Trance</h3>
+                <i class="fas fa-compact-disc"></i>
+            </div>
+            
+            <!-- Additional World Genres -->
+            <div class="genre-card" style="background-color: #27AE60">
+                <h3>Reggaeton</h3>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="genre-card" style="background-color: #2C3E50">
+                <h3>Salsa</h3>
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="genre-card" style="background-color: #E74C3C">
+                <h3>Cumbia</h3>
+                <i class="fas fa-drum"></i>
+            </div>
+            <div class="genre-card" style="background-color: #9B59B6">
+                <h3>J-Pop</h3>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <button class="toggle-btn">
+                <i class="fas fa-angle-left"></i>
+            </button>
+        </div>
+        <div class="sidebar-options">
+            <button class="option">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="option">
+                <i class="fas fa-plus-square"></i>
+                <span>Create Playlist</span>
+            </button>
+            <button class="option">
+                <i class="fas fa-list"></i>
+                <span>Add to Queue</span>
+            </button>
+            <button class="option">
+                <i class="fas fa-heart"></i>
+                <span>Liked Songs</span>
+            </button>
+            <button class="option">
+                <i class="fas fa-book"></i>
+                <span>Your Library</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
